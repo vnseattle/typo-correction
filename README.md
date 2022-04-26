@@ -1,9 +1,10 @@
 # Typo Correction
 This library is designed to suggest fixing misspelled words from user input. 
 There are three powerful features in this package:
-•	Multiple word checking
-•	Giving a list of suggestions
-•	A learning feature
+
+- Multiple word checking
+- Giving a list of suggestions
+- A learning feature
 
 ![DidYouMeanGoogle](https://vnseattle.com/typoCorrection/GoogleDemo.png)
 
@@ -25,9 +26,9 @@ import typoCorrection, { typoCorrections } from "typo-correction";
 ```js
 var result = typoCorrection(input,list,learn=[]);
 ```
-•	```input``` from user
-•	```list``` of corrected words 
-•	```learn``` (optional) list of learning words { in: "", out: "" }
+- ```input``` from user
+- ```list``` of corrected words 
+- ```learn``` (optional) list of learning words { in: "", out: "" }
 
 Single word :typoCorrection
 ```js
@@ -45,7 +46,7 @@ var correction = typoCorrections("wundor wuman",["human","woman", "kuman","luman
 ### Multiple word checking
 In the modern searching system, the position of words does not matter as much as correct spelling does. For example: “wonder woman” and “woman wonder” would give the same result. So, we have designed a solution to correct each word in a string, while the position of words remains. 
 
-Using typoCorrection```s``` to check multiple words.
+- Using typoCorrection```s``` to check multiple words.
 
 ```js
 var correction = typoCorrections("wundor wuman") // correction.best -> wonder woman
@@ -55,7 +56,8 @@ var correction = typoCorrections("wuman wonder") // correction.best -> woman won
 ### Giving a list of suggestions
 In some cases, we could get more than one correct answer. For example, if a user types “wuman”, it could be “woman” or “human” or "kuman". So, the library will give you the best answer: “woman”. The alternative answers are “human”,"kuman" for the user to select or train the system. 
 
-Using ```.matches``` to get a list of suggestions.
+- Using ```.matches``` to get a list of suggestions.
+
 ```js
 var correction = typoCorrection("wuman",["human","woman", "kuman","luman","wonder","winner"...] );
 correction.matches // -> ["human","kuman","luman"] 
@@ -64,7 +66,7 @@ correction.matches // -> ["human","kuman","luman"]
 ### Learning feature
 Based on different situations, we may have many different suggestions. For better user experiences, a learning function could be used for that purpose. For example, when the user types “wunder wuman”, the answer could be “wander woman”. This way they teach the system that “wonder woman” is a better suggestion. Consequently, the library will suggest “wonder woman” the next time the user searches.  
 
-Using array of objects ```{in:"wrong", out:"right"}``` to modify the result. 
+- Using array of objects ```{in:"wrong", out:"right"}``` to modify the result. 
 
 ```js
 var correction = typoCorrections("wunder wuman",[...]);
