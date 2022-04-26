@@ -1,0 +1,34 @@
+{
+  "name": "typo-correction",
+  "version": "1.0.0",
+  "description": "Suggest fixing misspelled, typos, matching human-quality input ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnseattle/typo-correction.git"
+  },
+  "keywords": [
+    "didyoumean",
+    "string similarity",
+    "spelling",
+    "levenshtein",
+    "typo",
+    "similar",
+    "matching",
+    "suggestion",
+    "spelling correction",
+    "text correction"
+  ],
+  "author": "Dev9x",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vnseattle/typo-correction/issues"
+  },
+  "homepage": "https://github.com/vnseattle/typo-correction#readme",
+  "dependencies": {
+    "fast-levenshtein": "^3.0.0"
+  }
+}
